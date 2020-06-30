@@ -1,22 +1,22 @@
 module.exports = {
   env: {
     browser: true,
-    commonjs: true,
+    node: true,
     es2020: true
   },
   root: true,
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   plugins: [
-    '@typescript-eslint',
+    "@typescript-eslint",
   ],
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
   ],
-  "overrides": [
+  overrides: [
     {
-      "files": ["*.js"],
-      "rules": {
+      files: ["*.js"],
+      rules: {
         "@typescript-eslint/no-var-requires": "off"
       }
     }

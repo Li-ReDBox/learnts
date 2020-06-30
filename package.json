@@ -5,7 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "tsc --noEmit && eslint src --ext .ts,.tsx"
   },
   "keywords": [],
   "author": "",
