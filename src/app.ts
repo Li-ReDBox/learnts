@@ -10,6 +10,10 @@ app.get("/variable/:arg", (req: Request, res: Response) => {
   res.send(`I have seen you say this ${req.params.arg}`);
 });
 
+app.get("/delimiter/:partOne[.-]:partTwo", (req: Request, res: Response) => {
+  res.send(`part one = ${req.params.partOne}, part two = ${req.params.partTwo}`)
+});
+
 app.listen(port, err => {
   if (err) {
     return console.error(err);
