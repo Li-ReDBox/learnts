@@ -7,9 +7,13 @@ npm install -S express
 
 npm install -D eslint typescript @types/express @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
+npm i -D jest ts-jest @types/jest supertest @types/supertest chai @types/chai
+
 npx eslint --init
 
 npx tsc --init
+
+npx ts-jest config:init
 
 # most of the default are fine, only need to change
 "target": "ES2019"   /* according to the recommendation of tsc: matching the version of node, v12 -> ES2019 */
