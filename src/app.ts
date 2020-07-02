@@ -12,7 +12,7 @@ app.get("/variable/:arg", (req: Request, res: Response) => {
   res.send(`I have seen you say this ${req.params.arg}`);
 });
 
-app.get("/delimiter/:partOne[.x]:partTwo", (req: Request, res: Response) => {
+app.get("/delimiter/:partOne[.x-]:partTwo", (req: Request, res: Response) => {
   res.send(`part one = ${req.params.partOne}, part two = ${req.params.partTwo}`)
 });
 
