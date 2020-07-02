@@ -8,10 +8,11 @@ describe("GET /random-url", () => {
     });
 });
 
+// Promise way, no need for done
 describe("GET /variable", () => {
-    it("should return 200 with parameter", (done) => {
-        request(app).get("/variable/ddd")
-            .expect("I have seen you say this ddd", done);
+    it("should return 200 with parameter", () => {
+        return request(app).get("/variable/ddd")
+            .expect("I have seen you say this ddd");
     });
 });
 
