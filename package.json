@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tsc --noEmit && eslint src --ext .ts,.tsx",
     "start": "tsc && node dist/server.js",
-    "test": "jest --forceExit --coverage --verbose"
+    "test": "jest --coverage --verbose"
   },
   "keywords": [],
   "author": "",
