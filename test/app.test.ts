@@ -1,5 +1,6 @@
 import request from "supertest";
 import app from "../src/app";
+import { expect } from "chai";
 
 describe("GET /random-url", () => {
     it("should return 404", (done) => {
@@ -27,8 +28,9 @@ describe("Delimiter is flexible", () => {
             .expect(200, "part one = 1, part two = 2", done);
     });
 
-    it("- is allowed", (done) => {
-        request(app).get("/delimiter/1-2")
-            .expect(200, "part one = 1, part two = 2", done);
+    // async, await way to test
+    it("- is allowed", async () => {
+        const response = await request(app).get("/delimiter/1-2");
+        expect(200, "part one = 1, part two = 2");
     });
 });
