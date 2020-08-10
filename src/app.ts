@@ -16,4 +16,10 @@ app.get("/delimiter/:partOne[.x-]:partTwo", (req: Request, res: Response) => {
   res.send(`part one = ${req.params.partOne}, part two = ${req.params.partTwo}`)
 });
 
+app.get('/headers',function(req,res){
+  //Express request is a super set of Node's request object, including headers:
+  // https://nodejs.org/api/http.html#http_class_http_incomingmessage
+	res.send("Request has headers: " + JSON.stringify(req.headers));
+});
+
 export default app;
