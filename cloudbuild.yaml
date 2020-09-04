@@ -6,5 +6,11 @@ steps:
   entrypoint: 'npm'
   args: ['test']
 - name: 'gcr.io/cloud-builders/npm'
-  id: run test
-  args: ['test']
+  id: run test with a node version in cloud-builders/npm has a problem
+  entrypoint: bash
+  args:
+  - '-c'
+  - |
+    node --version
+    npm --version
+    npm run test
