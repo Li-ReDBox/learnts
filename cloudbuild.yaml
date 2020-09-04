@@ -1,16 +1,8 @@
 steps:
-- name: 'gcr.io/cloud-builders/npm'
+- name: node
+  entrypoint: npm
   args: ['install']
 - name: 'node'
-  id: run test again with node from Docker hub, which is the new recommended way
+  id: run test
   entrypoint: 'npm'
   args: ['test']
-- name: 'gcr.io/cloud-builders/npm'
-  id: run test with a node version in cloud-builders/npm has a problem
-  entrypoint: bash
-  args:
-  - '-c'
-  - |
-    node --version
-    npm --version
-    npm run test
